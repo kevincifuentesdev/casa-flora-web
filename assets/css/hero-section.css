@@ -1,0 +1,121 @@
+@import "global.css";
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem var(--spacing-margin-mobile); 
+}
+
+@media (min-width: 768px) {
+    .hero-section {
+        padding: 5rem var(--spacing-margin-desktop);
+    }
+}
+
+/* Logotype */
+.logo-container {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 2rem;
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Main Heading */
+.secondary-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-headline-lg-mobile-size);
+    line-height: var(--text-headline-lg-mobile-lh);
+    color: var(--primary);
+    max-width: 48rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .secondary-heading {
+        font-size: var(--text-display-lg-size);
+        line-height: var(--text-display-lg-lh);
+    }
+}
+
+/* Introduction Paragraph */
+.hero-section p {
+    font-family: var(--font-body);
+    font-size: var(--text-body-lg-size);
+    line-height: var(--text-body-lg-lh);
+    color: var(--foreground-muted);
+    max-width: 42rem;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+}
+
+/* Button Containers */
+.call-to-action-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .call-to-action-buttons {
+        flex-direction: row;
+        width: auto;
+    }
+}
+
+/* Buttons */
+.delivery-button, .booking-button {
+    font-family: var(--font-body);
+    font-size: var(--text-label-lg-size);
+    line-height: var(--text-label-lg-lh);
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-default);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.delivery-button {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+    border: none;
+    box-shadow: var(--shadow-ambient-md);
+}
+
+.delivery-button:hover {
+    transform: scale(1.02);
+}
+
+.booking-button {
+    background-color: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.booking-button:hover {
+    background-color: rgba(173, 93, 78, 0.05);
+}
+
+/* Buttons Icons */
+.delivery-button svg,
+.booking-button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+    color: inherit; 
+}
