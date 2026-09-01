@@ -147,6 +147,10 @@ header {
     box-shadow: var(--shadow-ambient-sm);
 }
 
+main {
+    padding-top: 4rem;
+}
+
 .dark header {
     background-color: rgba(44, 30, 26, 0.95);
 }
