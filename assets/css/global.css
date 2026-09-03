@@ -149,6 +149,7 @@ header {
 
 main {
     padding-top: 4rem;
+    padding-bottom: 6rem;
 }
 
 .dark header {
@@ -165,11 +166,6 @@ main {
     padding: 0 var(--spacing-margin-mobile);
 }
 
-@media (min-width: 768px) {
-    .navbar {
-        padding: 0 var(--spacing-margin-desktop);
-    }
-}
 
 .main-heading {
     font-family: var(--font-display);
@@ -189,7 +185,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
@@ -208,4 +204,80 @@ main {
 
 .moon-icon {
     fill: none;
+}
+
+/* Bottom Navbar (Mobile only) */
+
+.bottom-navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: var(--surface);
+    box-shadow: 0 -2px 10px rgba(43, 29, 25, 0.05); 
+}
+
+.items-container {
+    display: flex;
+    justify-content: space-around; /* justify-around */
+    align-items: center; /* items-center */
+    height: 5rem;
+    padding: 0 1rem;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.bottom-navbar a {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-decoration: none;
+    color: var(--foreground-muted);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-xl);
+    transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.bottom-navbar a:hover {
+    background-color: rgba(43, 29, 25, 0.04);
+}
+
+.bottom-navbar a:active {
+    transform: scale(0.9);
+}
+
+.bottom-navbar a.active {
+    color: var(--primary);
+    font-weight: 700;
+    background-color: rgba(255, 221, 184, 0.3); 
+}
+
+.bottom-navbar svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+    color: inherit;
+}
+
+.bottom-navbar span {
+    font-family: var(--font-body);
+    font-size: var(--text-label-sm-size);
+    line-height: var(--text-label-sm-lh);
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        padding: 0 var(--spacing-margin-desktop);
+    }
+
+    .bottom-navbar {
+        display: none;
+    }
+
+    main {
+        padding-bottom: 0;
+    }
 }
