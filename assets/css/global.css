@@ -268,6 +268,84 @@ main {
     margin-top: 0.25rem;
 }
 
+/* Footer */
+.main-footer {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    padding: 3rem var(--spacing-margin-mobile) 7rem;
+    width: 100%;
+    margin-top: auto; 
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-gutter);
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+.footer-title {
+    font-family: var(--font-display);
+    font-size: var(--text-headline-md-size);
+    line-height: var(--text-headline-md-lh);
+    color: var(--secondary);
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.footer-brand p {
+    font-family: var(--font-body);
+    font-size: var(--text-body-md-size);
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.footer-links h4 {
+    font-family: var(--font-body);
+    font-size: var(--text-label-lg-size);
+    line-height: var(--text-label-lg-lh);
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-links li,
+.footer-links a {
+    font-family: var(--font-body);
+    font-size: var(--text-body-md-size);
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--secondary);
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    max-width: var(--container-max);
+    margin: 3rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: var(--text-label-sm-size);
+    color: rgba(255, 255, 255, 0.6);
+}
+
 @media (min-width: 768px) {
     .navbar {
         padding: 0 var(--spacing-margin-desktop);
@@ -279,5 +357,22 @@ main {
 
     main {
         padding-bottom: 0;
+    }
+
+    .main-footer {
+        padding-left: var(--spacing-margin-desktop);
+        padding-right: var(--spacing-margin-desktop);
+        padding-bottom: 3rem; 
+        margin-top: var(--spacing-gutter);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr); 
     }
 }
