@@ -145,8 +145,12 @@
     margin-bottom: 1.5rem;
 }
 
+.info-container p {
+    color: var(--foreground-muted);
+}
+
 .info-container p:not(:last-child) {
-    margin-bottom: 1.5rem;
+    margin: var(--spacing-base) 0;
 }
 
 /* Product Showcase */

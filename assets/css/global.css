@@ -149,7 +149,7 @@ header {
 
 main {
     padding-top: 4rem;
-    padding-bottom: 6rem;
+    padding-bottom: var(--spacing-gutter);
 }
 
 .dark header {
