@@ -180,12 +180,51 @@
     margin-bottom: 0.75rem;
 }
 
+.calendar-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.calendar-nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: var(--radius-full);
+    background: transparent;
+    color: var(--primary);
+    cursor: pointer;
+    padding: 0;
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.calendar-nav-btn:hover {
+    background-color: rgba(75, 3, 15, 0.06);
+}
+
+.calendar-nav-btn:active {
+    transform: scale(0.9);
+}
+
+.calendar-nav-btn svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: inherit;
+}
+
 .calendar-month {
     font-family: var(--font-body);
     font-size: var(--text-body-md-size);
     line-height: var(--text-body-md-lh);
     font-weight: 700;
     color: var(--primary);
+    min-width: 8rem;
+    text-align: center;
 }
 
 .calendar-container {
@@ -262,6 +301,11 @@
 
 .calendar-day.muted:hover {
     background-color: transparent;
+}
+
+.calendar-day.today {
+    box-shadow: inset 0 0 0 2px var(--primary);
+    font-weight: 700;
 }
 
 /* Time Slots */
