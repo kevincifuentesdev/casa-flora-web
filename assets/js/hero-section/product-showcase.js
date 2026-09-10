@@ -1,4 +1,4 @@
-import products from "./products.js";
+import products from "../product/products";
 
 function renderProductShowcase() {
     const productsGrid = document.querySelector(".products-grid");
