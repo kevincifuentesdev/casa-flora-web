@@ -1,5 +1,16 @@
 (function () {
     const DESKTOP_BREAKPOINT = 768;
+    let darkTheme = localStorage.getItem("dark-theme") === "true";
+
+    function applyTheme() {
+        document.documentElement.classList.toggle("dark", darkTheme);
+
+        if (darkModeBtn) {
+            darkModeBtn.querySelector(".moon-icon").style.fill = darkTheme
+                ? "currentColor"
+                : "none";
+        }
+    }
 
     const navLinks = [
         { label: "Inicio", href: "./index.html", icon: "home" },
@@ -62,21 +73,28 @@
     window.addEventListener("resize", handleResize);
 
     function switchTheme() {
-      document.documentElement.classList.toggle("dark");
+        darkTheme = !darkTheme;
+        localStorage.setItem("dark-theme", String(darkTheme));
+        applyTheme();
     }
 
     var darkModeBtn = navbar.querySelector(".dark-mode");
+
+    applyTheme();
+
     if (darkModeBtn) {
         darkModeBtn.addEventListener("click", function () {
             if (!document.startViewTransition) {
-              switchTheme();
-              return;
-            };
+                switchTheme();
+                return;
+            }
 
             document.documentElement.classList.add("theme-transitioning");
             var transition = document.startViewTransition(switchTheme);
             transition.finished.then(function () {
-                document.documentElement.classList.remove("theme-transitioning");
+                document.documentElement.classList.remove(
+                    "theme-transitioning",
+                );
             });
         });
     }

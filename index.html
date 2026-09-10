@@ -6,6 +6,11 @@
         <title>Casa Flora</title>
         <link rel="stylesheet" href="./assets/css/global.css" />
         <link rel="stylesheet" href="./assets/css/hero-section.css" />
+        <script>
+            if (localStorage.getItem("dark-theme") === "true") {
+                document.documentElement.classList.add("dark");
+            }
+        </script>
     </head>
     <body>
         <header>
