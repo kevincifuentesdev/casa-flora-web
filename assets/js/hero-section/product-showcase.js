@@ -1,4 +1,4 @@
-import products from "../product/products";
+import products from "../product/products.js";
 
 function renderProductShowcase() {
     const productsGrid = document.querySelector(".products-grid");
@@ -30,7 +30,7 @@ function createProductCard(product) {
     const tagContainer = document.createElement("div");
     tagContainer.className = "media-tag-container";
     const tag = document.createElement("span");
-    tag.textContent = product.getProductCategory();
+    tag.textContent = product.getProductCategories()[0];
     tagContainer.appendChild(tag);
 
     const infoDiv = document.createElement("div");

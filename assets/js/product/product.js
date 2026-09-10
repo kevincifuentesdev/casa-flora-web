@@ -1,14 +1,14 @@
 export default class Product {
     name;
     price;
-    category;
+    categories;
     description;
     imageUrl;
 
-    constructor(name, price, category, description, imageUrl) {
+    constructor(name, price, categories, description, imageUrl) {
         this.name = name;
         this.price = price;
-        this.category = category;
+        this.categories = categories;
         this.description = description;
         this.imageUrl = imageUrl;
     }
@@ -37,12 +37,12 @@ export default class Product {
         this.price = newPrice;
     }
 
-    getProductCategory() {
-        return this.category;
+    getProductCategories() {
+        return this.categories;
     }
 
-    setProductCategory(newCategory) {
-        this.category = newCategory;
+    setProductCategories(newCategories) {
+        this.categories = newCategories;
     }
 
     getProductDescription() {
