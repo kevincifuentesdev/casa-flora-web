@@ -73,7 +73,11 @@
               return;
             };
 
-            document.startViewTransition(switchTheme);
+            document.documentElement.classList.add("theme-transitioning");
+            var transition = document.startViewTransition(switchTheme);
+            transition.finished.then(function () {
+                document.documentElement.classList.remove("theme-transitioning");
+            });
         });
     }
 })();
