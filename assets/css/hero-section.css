@@ -1,0 +1,394 @@
+@import "global.css";
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem var(--spacing-margin-mobile); 
+}
+
+/* Logotype */
+.logo-container {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 2rem;
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Main Heading */
+.secondary-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-headline-lg-mobile-size);
+    line-height: var(--text-headline-lg-mobile-lh);
+    color: var(--primary);
+    max-width: 48rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+/* Introduction Paragraph */
+.hero-section p {
+    font-family: var(--font-body);
+    font-size: var(--text-body-lg-size);
+    line-height: var(--text-body-lg-lh);
+    color: var(--foreground-muted);
+    max-width: 42rem;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+}
+
+/* Button Containers */
+.call-to-action-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
+
+/* Buttons */
+.delivery-button, .booking-button {
+    font-family: var(--font-body);
+    font-size: var(--text-label-lg-size);
+    line-height: var(--text-label-lg-lh);
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.delivery-button {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+    border: none;
+    box-shadow: var(--shadow-ambient-md);
+}
+
+.delivery-button:hover {
+    transform: scale(1.02);
+}
+
+.booking-button {
+    background-color: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.booking-button:hover {
+    background-color: rgba(173, 93, 78, 0.05);
+}
+
+/* Buttons Icons */
+.delivery-button svg,
+.booking-button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+    color: inherit; 
+}
+
+/* Our Story Section */
+.our-story {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 4rem var(--spacing-margin-mobile);
+}
+
+.info-container {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.our-story .img-container {
+    order: 2;
+    position: relative;
+    min-height: 400px;
+    height: 24rem;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-ambient-md);
+}
+
+.img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-container h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-headline-lg-mobile-size);
+    line-height: var(--text-headline-lg-mobile-lh);
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.info-container p {
+    color: var(--foreground-muted);
+}
+
+.info-container p:not(:last-child) {
+    margin: var(--spacing-base) 0;
+}
+
+/* Product Showcase */
+.product-showcase {
+    padding: 3rem var(--spacing-margin-mobile);
+}
+
+.showcase-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.showcase-header h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-headline-lg-mobile-size);
+    line-height: var(--text-headline-lg-mobile-lh);
+    color: var(--primary);
+    margin: 0;
+}
+
+.menu-anchor {
+    display: none; 
+    font-family: var(--font-body);
+    font-size: var(--text-label-lg-size);
+    color: var(--secondary); 
+    text-decoration: none;
+    align-items: center;
+    gap: 0.5rem;
+    transition: opacity 0.2s;
+}
+
+.menu-anchor:hover {
+    opacity: 0.8;
+}
+
+.arrow-right-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--secondary); 
+}
+
+/* Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: var(--surface); 
+    border-radius: var(--radius-lg); 
+    box-shadow: 0 8px 24px rgba(38, 24, 20, 0.06); 
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(38, 24, 20, 0.12);
+}
+
+/* Product Media */
+.product-media {
+    position: relative;
+    height: 14rem; 
+    overflow: hidden;
+}
+
+.product-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-picture {
+    transform: scale(1.05);
+}
+
+/* Product Tag */
+.media-tag-container {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: rgba(255, 248, 246, 0.85); 
+    backdrop-filter: blur(4px);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-full);
+    z-index: 10;
+}
+
+.media-tag-container span {
+    font-family: var(--font-body);
+    font-size: var(--text-label-sm-size);
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Product Info */
+.product-info {
+    padding: 1.5rem; 
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-info h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-headline-md-size);
+    line-height: var(--text-headline-md-lh);
+    color: var(--primary); /* El título en la imagen es oscuro (Rojo Vino/Primary) */
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.product-info p {
+    font-family: var(--font-body);
+    font-size: var(--text-body-md-size);
+    line-height: var(--text-body-md-lh);
+    color: var(--foreground-muted);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Action Area */
+.product-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; 
+}
+
+.product-action span {
+    font-family: var(--font-body);
+    font-size: var(--text-label-lg-size);
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+.add-to-cart {
+    background: transparent;
+    border: none;
+    color: var(--primary);
+    padding: 0;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-to-cart:hover {
+    opacity: 0.7;
+}
+
+.add-to-cart-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: inherit;
+}
+
+/* Media Queries */
+
+/* Tablet */
+@media (min-width: 640px) {
+    .call-to-action-buttons {
+        flex-direction: row;
+        width: auto;
+    }
+
+    .delivery-button, .booking-button {
+        border-radius: var(--radius-default);
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    .hero-section {
+        padding: 5rem var(--spacing-margin-desktop);
+    }
+
+    .secondary-heading {
+        font-size: var(--text-display-lg-size);
+        line-height: var(--text-display-lg-lh);
+    }
+
+    .our-story {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: var(--spacing-margin-desktop);
+        padding-right: var(--spacing-margin-desktop);
+    }
+
+    .img-container {
+        order: 1;
+        height: 100%;
+    }
+
+    .info-container {
+        order: 2;
+    }
+
+    .info-container h2 {
+        font-size: var(--text-headline-lg-size);
+        line-height: var(--text-headline-lg-lh);
+    }
+
+    .product-showcase {
+        padding: 0 var(--spacing-margin-desktop);
+    }
+
+    .showcase-header h2 {
+        font-size: var(--text-display-lg-size);
+        line-height: var(--text-display-lg-lh);
+    }
+
+    .menu-anchor {
+        display: flex;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
