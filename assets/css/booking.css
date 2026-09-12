@@ -565,6 +565,45 @@
         box-shadow 0.4s ease;
 }
 
+/* Field Validation Error */
+.field-error {
+    box-shadow: 0 0 0 2px var(--destructive);
+    border-radius: var(--radius-lg);
+    animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-4px); }
+    40% { transform: translateX(4px); }
+    60% { transform: translateX(-3px); }
+    80% { transform: translateX(2px); }
+}
+
+/* Inline Error Message */
+.field-error-msg {
+    display: block;
+    font-family: var(--font-body);
+    font-size: var(--text-label-sm-size);
+    line-height: var(--text-label-sm-lh);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--destructive);
+    margin-top: 0.5rem;
+    animation: errorFadeIn 0.3s ease;
+}
+
+@keyframes errorFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Tablet & Desktop (768px+) */
 @media (min-width: 768px) {
     .diners-control {
