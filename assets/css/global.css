@@ -336,7 +336,7 @@ main {
 .bottom-navbar a.active {
     color: var(--primary);
     font-weight: 700;
-    background-color: rgba(255, 221, 184, 0.3);
+    background-color: #ffddb84d;
 }
 
 .bottom-navbar svg {
@@ -382,7 +382,7 @@ main {
 .footer-brand p {
     font-family: var(--font-body);
     font-size: var(--text-body-md-size);
-    color: rgba(255, 255, 255, 0.8);
+    color: #ffffffcc;
     margin: 0;
 }
 
@@ -430,7 +430,7 @@ main {
     text-align: center;
     font-family: var(--font-body);
     font-size: var(--text-label-sm-size);
-    color: rgba(255, 255, 255, 0.6);
+    color: #ffffff99;
 }
 
 .desktop-nav-links {
